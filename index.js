@@ -5,7 +5,7 @@ const options = { port: PORT };
 const osc = new OSC({ plugin: new OSC.DatagramPlugin(options) });
 
 osc.on('open', () => {
-  console.log('Started osc server listening on port ${PORT}');
+  console.log(`Started osc server listening on port ${PORT}`);
 });
 
 osc.on('/currentTrack', (message) => {
