@@ -1,7 +1,13 @@
 const moment = require('moment');
 const OSC = require('osc-js');
+
 const PORT = 9912;
-const options = { port: PORT };
+const options = {
+  open: {
+    host: 'localhost',
+    port: PORT
+  }
+};
 const osc = new OSC({ plugin: new OSC.DatagramPlugin(options) });
 
 osc.on('open', () => {
