@@ -1,0 +1,14 @@
+{
+  "name": "xchn-presenter",
+  "version": "0.0.1",
+  "description": "Present currently playing song in a console",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "David Granström",
+  "license": "MIT",
+  "dependencies": {
+    "osc-js": "^1.0.3"
+  }
+}
