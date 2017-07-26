@@ -11,7 +11,18 @@ const options = {
 const osc = new OSC({ plugin: new OSC.DatagramPlugin(options) });
 
 osc.on('open', () => {
-  console.log(`Started osc server listening on port ${PORT}`);
+  const banner = `
+ █████ █████          █████
+░░███ ░░███          ░░███
+ ░░███ ███    ██████  ░███████   ████████
+  ░░█████    ███░░███ ░███░░███ ░░███░░███
+   ███░███  ░███ ░░░  ░███ ░███  ░███ ░███
+  ███ ░░███ ░███  ███ ░███ ░███  ░███ ░███
+ █████ █████░░██████  ████ █████ ████ █████
+░░░░░ ░░░░░  ░░░░░░  ░░░░ ░░░░░ ░░░░ ░░░░░
+
+  `;
+  console.log(banner);
 });
 
 osc.on('/currentTrack', (message) => {
